@@ -1,4 +1,4 @@
-pip install tweepy
+!pip install tweepy
 import tweepy
 import time
 
