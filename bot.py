@@ -1,4 +1,3 @@
-pip install tweepy
 import tweepy
 import time
 
@@ -17,11 +16,11 @@ numTweet = 500
 for tweet in tweepy.Cursor(api.search,search).items(numTweet):
     try:
         print('Tweet Liked')
-        tweet.favourite()
+        tweet.favorite()
         print('Retweet done')
         tweet.retweet()
         time.sleep(10)
     except tweepy.TweepError as e:
         print(e.reason)
-    except Stopiteration:
+    except StopIteration:
         break
